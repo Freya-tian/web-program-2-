@@ -56,11 +56,11 @@ h5{
     width: 30%;
     height: 30%;
 }
-.addsom{
+/*.addsom{
     display: flex;
     justify-content:space-between;
     margin-top: 40px;
-}
+}*/
 input{
     height: 15px;
     width: 75%;
