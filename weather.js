@@ -59,7 +59,7 @@ function handleError() {
 var id =0;
 function findCity() {
     var findbCity = document.getElementById("addcity");
-    const url = "http://api.openweathermap.org/data/2.5/weather?q="+findbCity.value+"&appid=26a7dca7e46fbceb5fa3f089a727767c";
+    const url = "https://api.openweathermap.org/data/2.5/weather?q="+findbCity.value+"&appid=26a7dca7e46fbceb5fa3f089a727767c";
     console.log(findCity.value)
     fetch(url)
         .then((res) => {
