@@ -18,7 +18,7 @@ function handleSuccess(position) {
     console.log("lon:", lon);
     console.log("lat:", lat);
     const url = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=26a7dca7e46fbceb5fa3f089a727767c";
-    fetch(url)
+    fetch("http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=26a7dca7e46fbceb5fa3f089a727767c")
         .then(res=> {
         return res.json();
         }).then(result=>{
