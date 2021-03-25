@@ -17,7 +17,7 @@ function handleSuccess(position) {
     var lat = position.coords.latitude;
     console.log("lon:", lon);
     console.log("lat:", lat);
-    const url = "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=26a7dca7e46fbceb5fa3f089a727767c";
+    const url = "https://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+lon+"&appid=26a7dca7e46fbceb5fa3f089a727767c";
     fetch(url)
         .then(res=> {
         return res.json();
