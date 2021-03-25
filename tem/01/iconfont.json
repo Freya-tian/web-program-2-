@@ -1,0 +1,16 @@
+{
+  "id": "2446002",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "781679",
+      "name": "摄氏度-01",
+      "font_class": "sheshidu01",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    }
+  ]
+}
