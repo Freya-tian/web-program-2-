@@ -5,6 +5,10 @@ body,h1 {
 	margin: 0px;
     margin-bottom:0px; 
 }
+ul,li{
+    list-style: none;
+    padding: 0%;
+}
 #all{
     padding-left: 2%;
     padding-right: 2%;
@@ -66,7 +70,11 @@ input{
     width: 75%;
 }
 
-
+.find{
+    /*width: 200px;*/
+    display: flex;
+    justify-content:space-between;
+}
 .MStemperature>h2{
     display: inline;
    
@@ -114,16 +122,33 @@ input{
     background-color: #ece8d9;
     margin-bottom: 10px;
 }
-.MSoterinfo,.BJoterinfo{
-    margin-top: 20px;
+#other-cities{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
 }
-/* @media only screen and (min-width: 600px) {
-    [class*] {
+@media screen and (max-width: 650px){
+    .city{
         width: 100%;
     }
-} */
-#Moscow,#Beijing,#Shanghai,#SanFrancisco{
-     /* display: none;  */
-     width: 100%;
-     margin-top: 30px;
+}
+
+span{
+    font-weight: 800;
+}
+ul{
+    display:block;
+}
+li{
+    height: 30px;
+    width: 100%;
+    background-color: #ece8d9;
+    margin-bottom: 10px;
+    
+}
+
+li:first-child{
+    display: flex;
+    justify-content: space-between;
 }
