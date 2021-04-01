@@ -1,154 +1,303 @@
-body,h1 {
-    background-color: #fffdf6;
-    font-family: "Times New Roman";
-    color: #494949;
-	margin: 0px;
-    margin-bottom:0px; 
-}
-ul,li{
-    list-style: none;
-    padding: 0%;
-}
-#all{
-    padding-left: 2%;
-    padding-right: 2%;
-}
-button{
-    display: none;
-}
-.new{
-    display: inline;
-    margin-left: 10px;
-    position: relative;top: 15px;filter: contrast(40%);
-}
+<!DOCTYPE html>
+<html lang="ru">
 
-h2,h3,h5{
-    margin:0px;
-}
-h3,h5{
-    display: inline;
-}
-h5{
-    float: right;    
-    padding-top: 5px;
-    overflow: hidden;
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="weather.css">
+    <link rel="stylesheet" type="text/css" href="tem\01/demo.css">
+    <link rel="stylesheet" type="text/css" href="tem\01/iconfont.css">
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
 
-.closes{
-    float: right;
-}
-#closes1,#closes2,#closes3{
-    float: right;
-}
-.SP{
-    width: 100%;
-  
-    margin-top: 40px;
-}
-.SPtemperature {
-    width: 100%;
+    <!-- <script>
+            function closes(){
+            var clo = document.getElementById("closes");
+            alert(clo)
+            // clo.style.display = "none";
+     
+        }
+        </script> -->
+    <style>
+        @media screen and (min-width: 650px) {
+            button {
+                display: inline;
+                margin-left: 10%;
+            }
 
-}
-.SPoterinfo{
-    width: 100%;
-}
-/* .SPtemperature {
-    width: 500px;
-   
-} */
-.img1{
-    width: 30%;
-    height: 30%;
-}
-/*.addsom{
-    display: flex;
-    justify-content:space-between;
-    margin-top: 40px;
-}*/
-input{
-    height: 15px;
-    width: 75%;
-}
+            .new {
+                display: none;
+            }
 
-.find{
-    /*width: 200px;*/
-    display: flex;
-    justify-content:space-between;
-}
-.MStemperature>h2{
-    display: inline;
-   
-}
-/* #MB{
-    display: flex;
-    justify-content:space-around;
-    margin-top: 30px;
-} */
-.BJtemperature>h2{
-    display: inline;
-}
-.BJtemperature{
-    display: flex;
-    justify-content: space-between;
-}
-.wind{
-    text-align: justify;
-    height: 30px;
-    width: 100%;
-    background-color: #ece8d9;
-    margin-bottom: 10px;
-}
-.cloudy{
-    height: 30px;
-    width: 100%;
-    background-color: #ece8d9;
-    margin-bottom: 10px;
-}
-.pressure{
-    height: 30px;
-    width: 100%;
-    background-color: #ece8d9;
-    margin-bottom: 10px;
-}
-.humidity{
-    height: 30px;
-    width: 100%;
-    background-color: #ece8d9;
-    margin-bottom: 10px;
-}
-.coordinates{
-    height: 30px;
-    width: 100%;
-    background-color: #ece8d9;
-    margin-bottom: 10px;
-}
-#other-cities{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+            .addsom {
+                display: flex;
+                justify-content: space-between;
+                margin: 0%;
 
-}
-@media screen and (max-width: 650px){
-    .city{
-        width: 100%;
-    }
-}
+            }
 
-span{
-    font-weight: 800;
-}
-ul{
-    display:block;
-}
-li{
-    height: 30px;
-    width: 100%;
-    background-color: #ece8d9;
-    margin-bottom: 10px;
+            input {
+                height: 30px;
+                width: 90%;
+            }
+
+            .find {
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .SP {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+
+            .SPtemperature {
+                width: 50%;
+
+            }
+
+            .img1 {
+                width: 20%;
+                height: 60%;
+            }
+
+            .SPoterinfo {
+                width: 45%;
+            }
+
+
+
+            .menu {
+                margin-left: 30%;
+            }
+
+
+            .addsom {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+            }
+
+            input {
+                height: 15px;
+                width: 75%;
+            }
+
+            .city {
+                max-width: 100%;
+                min-width: 45%;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body id="all">
+    <div class="menu">
+
+        <h1 style="display: inline; ">Погода Здесь</h1>
+        <!-- <button type="button"  >Обновить геолокацию</button> -->
+        <a href="javascript:document.location.reload(true);" title="" target="_self"><button type="button">Обновить
+                геолокацию</button></a>
+        <a href="javascript:document.location.reload(true);" title="" target="_self"><img class="new" src="png/刷新.png"
+                height="50px" alt="" /></a>
+        <!-- <img class="new" src="png/刷新.png" height="50px"> -->
+    </div>
+    <div class="SP">
+
+        <div class="SPtemperature">
+
+            <!-- <--!filter图片改变对比度-->
+
+        </div>
+        <div class="SPoterinfo">
+            <div class="wind">
+
+            </div>
+            <div class="cloudy">
+
+            </div>
+            <div class="pressure">
+
+            </div>
+            <div class="humidity">
+
+            </div>
+            <div class="coordinates">
+
+            </div>
+        </div>
+    </div>
+    <div class="addsom">
+        <h1>Избранное</h1>
+        <div class="find">
+            <input id="addcity" name=cityname type="text" placeholder="дабавите новый город" value=""></input>
+
+
+
+
+            <img src="png/加号.png" height="25px" id="bt" style="position: relative;top: 0px; filter: contrast(40%);"
+                onclick="findCity()" alt="">
+        </div>
+
+    </div>
+    <div id="other-cities">
+
+    </div>
+    <br>
+    <div>
+        <h2>All informations</h2>
+        <div id="allinfor">
+            <!-- <button class='getinfo'   onclick=getinfor()>get </button> -->
+        </div>
+    </div>
     
-}
+    <!-- <div id="MB">
+            <div id="Moscow">
+            
+                <div class="MStemperature">
+                    <h2>Moscow</h2>
+                    <img src="png/天气 - 雾.png" height="20px" style="margin-left: 50px;position: relative;top: 4px;">
+                    <b style="font-size: 25px; margin-left: 50px;">8</b>
+                    <img src="png/温度.png" height="25px" style="position: relative;top: 4px; filter: contrast(40%);">
+                    <img src="png/叉号.png" height="25px" id="closes1" onclick="closes()" alt="">
+                </div>
+                <div class="MSoterinfo">
+                    <div class="wind">
+                        <h3>Ветер</h3>
+                        <h5>123456dfdms</h5>
+                    </div>
+                    <div class="cloudy">
+                        <h3>облачность</h3>
+                        <h5>123456</h5>
+                    </div>
+                    <div class="pressure">
+                        <h3>давление</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="humidity">
+                        <h3>влажность</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="coordinates">
+                        <h3>координат</h3>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+            <div id="Beijing">
+                
+                <div class="BJtemperature">
+                    <h2>Beijing</h2>
+                    <img src="png/天气 - 大雨.png" height="20px" style="margin-left: 50px;position: relative;top: 4px;">
+                    <div>
+                        <b style="font-size: 25px; margin-left: 50px;">0</b>
+                        <img src="png/温度.png" height="25px" style="position: relative;top: 4px; filter: contrast(40%);">
+                    </div>
+                   <b style="font-size: 25px; margin-left: 50px;">0</b>
+                    <img src="png/温度.png" height="25px" style="position: relative;top: 4px; filter: contrast(40%);"> -->
+    <!-- <img src="png/叉号.png" height="25px" id="closes2" onclick="closes2()" alt="">
+                </div>
+                <div class="BJoterinfo">
+                    <div class="wind">
+                        <h3>Ветер</h3>
+                        <h5>123456</h5>
+                    </div>
+                    <div class="cloudy">
+                        <h3>облачность</h3>
+                        <h5>123456</h5>
+                    </div>
+                    <div class="pressure">
+                        <h3>давление</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="humidity">
+                        <h3>влажность</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="coordinates">
+                        <h3>координат</h3>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div> -->
+    <!-- </div>
+        <div id="MB"> -->
+    <!-- <div id="Shanghai">
+            
+                <div class="MStemperature">
+                    <h2>Shanghai</h2>
+                    <img src="png/天气 (3).png" height="20px" style="margin-left: 50px;position: relative;top: 4px;">
+                    <b style="font-size: 25px; margin-left: 50px;">3</b>
+                    <img src="png/温度.png" height="25px" style="position: relative;top: 4px; filter: contrast(40%);">
+                    <img src="png/叉号.png" height="25px" id="closes3" onclick="closes3()" alt="">
+                </div>
+                <div class="MSoterinfo">
+                    <div class="wind">
+                        <h3>Ветер</h3>
+                        <h5>123456fbdbdbd</h5>
+                    </div>
+                    <div class="cloudy">
+                        <h3>облачность</h3>
+                        <h5>123456sf smslvsvbvsv</h5>
+                    </div>
+                    <div class="pressure">
+                        <h3>давление</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="humidity">
+                        <h3>влажность</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="coordinates">
+                        <h3>координат</h3>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+            <div id="SanFrancisco">
+                
+                <div class="BJtemperature">
+                    <h2>San Francisco</h2>
+                    <img src="png/天气 (1).png" height="20px" style="position: relative;top: 4px;">
+                    <div>
+                        <b style="font-size: 25px; ">25</b>
+                        <img src="png/温度.png" height="25px" style="position: relative;top: 4px; filter: contrast(40%);">
+                    </div> -->
+    <!-- <b style="font-size: 25px; ">25</b>
+                    <img src="png/温度.png" height="25px" style="position: relative;top: 4px; filter: contrast(40%);"> -->
+    <!-- <img src="png/叉号.png" height="25px" id="closes4" onclick="closes4()" alt="">
+                </div>
+                <div class="BJoterinfo">
+                    <div class="wind">
+                        <h3>Ветер</h3>
+                        <h5>123456</h5>
+                    </div>
+                    <div class="cloudy">
+                        <h3>облачность</h3>
+                        <h5>123456</h5>
+                    </div>
+                    <div class="pressure">
+                        <h3>давление</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="humidity">
+                        <h3>влажность</h3>
+                        <h5></h5>
+                    </div>
+                    <div class="coordinates">
+                        <h3>координат</h3>
+                        <h5></h5>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    <!-- <script type="text/javascript" src="weather.js"></script> -->
+    <script type="text/javascript" src="getweather.js"></script>
 
-li:first-child{
-    display: flex;
-    justify-content: space-between;
-}
+
+</body>
+
+</html>
