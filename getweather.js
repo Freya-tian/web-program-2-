@@ -18,7 +18,7 @@ window.onload = function () {
     }
     function getinfor() {
         var allinfor = document.getElementById('allinfor');
-        fetch('http://localhost:3000/favourites', {
+        fetch('http://localhost:5000/favourites', {
             method: 'GET',
             // mode: 'cors',
         }).then((res) => {
@@ -27,7 +27,7 @@ window.onload = function () {
         })
             .then(json => {
                 // var result = JSON.parse(json)
-                // console.log(result);
+                console.log(json);
                 var data = "";
                 for (var i = 0; i < json.length; i++) {
                     console.log(json[i].name);
@@ -91,7 +91,7 @@ async function handleSuccess(position) {
     var lat = position.coords.latitude;
     console.log("lon:", lon);
     console.log("lat:", lat);
-    fetch(`http://localhost:3000?lat=${lat}&lon=${lon}`, {
+    fetch(`http://localhost:5000/location?lat=${lat}&lon=${lon}`, {
         method: 'POST',
         // mode: 'cors',
     }).then((res) => {
@@ -132,7 +132,7 @@ async function handleSuccess(position) {
 }
 function handleError() {
     alert('error')
-    fetch("http://localhost:3000?cityname=beijing", {
+    fetch("http://localhost:5000/city?cityname=beijing", {
         method: 'POST',
         // mode: 'cors',
     }).then((res) => {
@@ -181,19 +181,8 @@ function handleError() {
 var bt = document.getElementById('bt');
 bt.onclick = function () {
     var value = document.getElementById('addcity').value;
-    // var xmlHttp = new XMLHttpRequest();
-    // xmlHttp.onreadystatechange=function()
-    // {
-    //     if (xmlHttp.readyState==4 && xmlHttp.status==200)
-    //     {
-    //         console.log(xmlHttp.responseText) ;
-    //     }
-    // };
 
-
-    // xmlHttp.open('POST', 'http://127.0.0.1:3000/', true); 
-    // xmlHttp.send(value);      //吧input框中的value发送过去
-    fetch(`http://localhost:3000/?cityname=${value}`, {
+    fetch(`http://localhost:5000/city?cityname=${value}`, {
         method: 'POST',
         // mode: 'cors',
     }).then((res) => {
@@ -201,7 +190,7 @@ bt.onclick = function () {
         return res.json();
     }).then(result => {
 
-        // console.log(result);
+        console.log(result);
         if (result.cod != 404) {
             var other_cities = document.getElementById("other-cities")
             var divs = document.createElement("div")
@@ -248,7 +237,7 @@ function closes(btn) {
     var bro = btn.parentNode.children[0]
     var value = bro.innerText;
     // console.log(value);
-    fetch(`http://localhost:3000/?cityname=${value}`, {
+    fetch(`http://localhost:5000/delete?cityname=${value}`, {
         method: 'DELETE',
         // mode: 'cors',
     }).then((res) => {
